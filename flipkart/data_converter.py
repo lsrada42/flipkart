@@ -5,12 +5,12 @@ from langchain_core.documents import Document
 def dataconverter():
     product_data = pd.read_csv("data/flipkart_product_review.csv")
     
-    data = product_datapp[["product_title","review"]]
+    data = product_data[["product_title","review"]]
     
     product_list = [] 
 
     #iterate over the rows of the df
-    for index, row in df.iterrows():
+    for index, row in product_data.iterrows():
         object = {
             'product_name': row['product_title'], 
             'review': row['review']
@@ -30,5 +30,5 @@ def dataconverter():
 
         docs.append(doc)
         
-    return Docs
+    return docs
         

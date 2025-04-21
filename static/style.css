@@ -1,0 +1,109 @@
+/* Full-page background image */
+body, html {
+	height: 100%;
+	margin: 0;
+	font-family: 'Inter', sans-serif;
+	background: url("chat-bg.jpg") no-repeat center center fixed;
+	background-size: cover;
+  }
+  
+  /* Chat container remains a white card over the background */
+  .chat-container {
+	max-width: 600px;
+	margin: 60px auto;
+	background: white;
+	border-radius: 16px;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+  }
+  
+  /* Header */
+  .chat-header {
+	display: flex;
+	align-items: center;
+	padding: 16px;
+	border-bottom: 1px solid #eee;
+  }
+  
+  .chat-header img {
+	height: 40px;
+	width: 40px;
+	object-fit: contain;
+	border-radius: 50%;
+	margin-right: 12px;
+  }
+  
+  .chat-header .title {
+	font-weight: 600;
+	font-size: 16px;
+	color: #222;
+	line-height: 1.2;
+  }
+  
+  .chat-header .title small {
+	font-weight: 400;
+	font-size: 12px;
+	color: #777;
+  }
+  
+  /* Chat area */
+  .chat-body {
+	flex: 1;
+	padding: 16px;
+	overflow-y: auto;
+  }
+  
+  .msg {
+	display: flex;
+	margin-bottom: 16px;
+  }
+  
+  .msg.bot .text {
+	background: #f0f0f0;
+	color: #333;
+	border-radius: 12px;
+	padding: 12px;
+	max-width: 75%;
+  }
+  
+  .msg.user {
+	justify-content: flex-end;
+  }
+  
+  .msg.user .text {
+	background: #c7f0c4;
+	color: #222;
+	border-radius: 12px;
+	padding: 12px;
+	max-width: 75%;
+  }
+  
+  /* Footer input area */
+  .chat-footer {
+	border-top: 1px solid #eee;
+	padding: 12px 16px;
+  }
+  
+  .chat-footer .input-group {
+	background: #fff;
+	border-radius: 8px;
+	overflow: hidden;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  }
+  
+  .chat-footer input {
+	border: none;
+	padding: 12px;
+	outline: none;
+	flex-grow: 1;
+  }
+  
+  .chat-footer .send-btn {
+	border: none;
+	background: black;
+	color: white;
+	padding: 0 16px;
+	cursor: pointer;
+  }
